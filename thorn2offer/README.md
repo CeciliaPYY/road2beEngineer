@@ -29,6 +29,6 @@
 排序比查找要复杂一些，面试经常会要求比较插入排序、冒泡排序、归并排序、快速排序等不同算法的优劣。
 在面试的时候一定要对各种排序算法的特点烂熟于胸，能够从**额外空间消耗**、**平均时间复杂度**和**最差时间复杂度**方面去比较它们的优缺点。
 
-![JPG](\images/sort.jpeg)
+![image](http://github.com/CeciliaPYY/road2beEngineer/raw/master/thorn2offer/images/sort.jpeg)
 
 很多公司都喜欢在面试环节要求应聘者写出快速排序的代码。
