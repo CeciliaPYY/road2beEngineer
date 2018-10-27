@@ -18,21 +18,25 @@ class Solution():
         else:
             # 初始化一个字符串
             number = '0'*n
-            while(not Solution().Increment(number)):
+            while(not Solution().Increment(number, n)):
                 Solution().PrintNumber(number)
             
-    def Increment(self, number):
+    def Increment(self, number, n):
         # 实现在表示数字的字符串 number 上增加 1，如果达到最大的 n 位数，则返回 True
-        if len(str(int(number) + 1)) > len(number):
+        if len(str(int(number) + 1)) > n:
             return True
         else:
+            """如何实现字符串的加法（头疼）"""
+
             return False
 
     def PrintNumber(self, number):
         # 打印 number
-        for i in range(len(number)):
-            if not int(i) == 0:
-                print(number)
+        print(number)
+        # for i in range(len(number)):
+        #     if not int(i) == 0:
+        #         print(i)
+print(Solution().printToMaxOfNDigits(2))
 
 # 看起来似乎很简单，但是这两个看似简单的函数都暗藏着小小玄机。
 # 首先我们需要知道什么时候停止在 number 上加1，即达到了最大的 n 位数，
@@ -47,3 +51,34 @@ class Solution():
 
 # 接下来再考虑如何打印用字符串表示的数字。这里主要是考虑打印要符合我们的阅读习惯，即
 # 只有在碰到第一个非 0 的字符之后才开始打印，直到字符串的结尾。
+
+# 思路二：把问题转换成数字排列的解法，递归使代码更简洁
+# 如果我们在数字前面补 0，就会发现 n 位所有十进制数其实就是 n 个从 0 到 9 的全排列
+# 全排列用递归很容易表达，数字的每一维都可能是 0 - 9中的一个数。 
+class Solution2():
+    def printToMaxOfNDigits(self, n):
+        if n <= 0:
+            return
+        else:
+            number = [0 for _ in range(n)]
+            for i in range(0, 10):
+                number[0] = i
+                Solution2().permutation(number, n, 0)
+
+    def permutation(self, number, n, index):
+        if index == n - 1:
+            Solution2().PrintNumber(number)
+            return 
+        for i in range(10):
+            number[index + 1] = i
+            Solution2().permutation(number, n, index+1)
+
+    def PrintNumber(self, number):
+        stringNumber = []
+        for i in range(len(number)):
+            if not number[i] == 0:
+                stringNumber.append(str(number[i]))
+        print(''.join(stringNumber))
+        return
+
+print(Solution2().printToMaxOfNDigits(2))

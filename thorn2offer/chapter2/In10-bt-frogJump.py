@@ -19,6 +19,6 @@ class Solution:
             resultFibonacci[2] = 2
             for i in range(3, number):
                 resultFibonacci[i] = sum([resultFibonacci[j] for j in range(0,i)]) + 1
-        return sum(resultFibonacci) + 1
+            return sum(resultFibonacci) + 1
 
 print(Solution().jumpFloorII(3))
