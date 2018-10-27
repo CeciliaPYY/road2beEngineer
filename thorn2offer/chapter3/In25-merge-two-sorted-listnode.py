@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*-
+    # -*- coding:utf-8 -*-
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -22,21 +22,27 @@ class ListNode:
 
 class Solution(object):
     def mergeTwoSortedListNode(self, pHead1, pHead2):
+        if pHead1 is None and pHead2 is None:
+            return None
+        elif not pHead1 is None and pHead2 is None:
+            return pHead1
+        elif not pHead2 is None and pHead1 is None:
+            return pHead2
+        else:
+            # 创建两个链表指向同一结点，并且随意设置一个数作为起始
+            pHead = dummy = ListNode(0)
+            while pHead1 and pHead2:
+                if pHead1.val < pHead2.val:
+                    pHead.next = pHead1
+                    pHead1 = pHead1.next
+                else:
+                    pHead.next = pHead2
+                    pHead2 = pHead2.next
+                pHead = pHead.next
 
-        # 创建两个链表指向同一结点，并且随意设置一个数作为起始
-        pHead = dummy = ListNode(0)
-        while pHead1 and pHead2:
-            if pHead1.val < pHead2.val:
-                pHead.next = pHead1
-                pHead1 = pHead1.next
-            else:
-                pHead.next = pHead2
-                pHead2 = pHead2.next
-            pHead = pHead.next
+            pHead.next = pHead1 or pHead2
 
-        pHead.next = pHead1 or pHead2
-
-        return dummy.next
+            return dummy.next
 
 l1 = ListNode(1)
 l1.next = ListNode(2)
