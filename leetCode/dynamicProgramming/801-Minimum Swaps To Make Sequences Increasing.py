@@ -6,8 +6,8 @@ class Solution:
         :rtype: int
         """
         length = len(A)
-        swap = [0]*length
-        keep = [0]*length
+        swap = [length]*length
+        keep = [length]*length
         
         keep[0] = 0
         swap[0] = 1
@@ -24,7 +24,7 @@ class Solution:
                 keep[i] = min(keep[i], swap[i-1])
                 # 交换 A[i] B[i]，不交换 A[i-1] B[i-1]
                 swap[i] = min(swap[i], keep[i-1] + 1)
-        return min(swap[length-1], keep[length-1])
+        return swap, keep
         
         
 
