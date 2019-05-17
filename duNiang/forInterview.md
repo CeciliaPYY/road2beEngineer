@@ -1,71 +1,45 @@
-百度面试准备
+# 移动客户端面试
+## 问题们
+#### 1. 如何创建使用线程 Thread 
+[Thread](./Thread.md)
 
-一、 算法部分
-1. 两个有序数组求中位数(leetcode hard) （√）
-https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+#### 2. extends Thread 和 implement Runnable 差异在哪里 
+[Thread Difference](./ThreadDifference.md)
 
-2. 判断平衡二叉树(剑指offer easy) 
-https://leetcode-cn.com/problems/balanced-binary-tree/
+#### 3. 线程间的同步
+[Thread Synchronization](./ThreadSynchronization.md)
 
-3. 最长上升子序列(leetcode medium) （√）
-https://leetcode-cn.com/problems/longest-increasing-subsequence/
+#### 4. 线程池的定义、使用方式、启动策略、拒绝策略。ThreadPoolExcutor 构造方法七个参数的含义
+[ThreadPoolExcutor](./ThreadPoolExcutor.md)
 
-4. 二叉树转双向链表(剑指offer) 
-https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5?tpId=13&tqId=11179&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking
+#### 5. handler 机制
+[handler](./handler.md)
 
-5. LRU cache实现(leetcode) 
-https://leetcode-cn.com/problems/lru-cache/
+#### 6. override 和 overload
+[override & overload](./override&overload.md)
 
-6. House Robber(leetcode) 一（√）二（√） 三 ()
-https://leetcode-cn.com/problems/house-robber/
+#### 7. static 关键字有哪些用法
 
-7. 给定数组A[]={1,4,7,...}和一个数T。求和为T的A中的数最少要几个。A中的数可复用。
+[static](./static.md)
 
-8. 连续子数组最大和 （√）（分治法尚未解决）
+#### 8. final 的意义
 
-9. 快速排序过程？如何用单链表实现快速排序？
-https://blog.csdn.net/razor87/article/details/71155518
-https://blog.csdn.net/yangalbert/article/details/7577782
+[final](./final.md)
 
-10. string转float，注意string中可能包含字母
+#### 9. Activity 的启动模式，每种启动模式的意义
 
-11. 二叉树非递归后序遍历，先序遍历 (medium)
-https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
-https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
-https://leetcode-cn.com/problems/binary-tree-postorder-traversal/
+#### 10. 一个 activity 启动另一个 activity 会走哪些生命周期
 
-12. 若干个二叉树，如何按照层序遍历(medium)
-https://leetcode-cn.com/problems/binary-tree-level-order-traversal/
+#### 11. Service的使用，怎么使用，两种使用方式的差别，适合什么样的场景，如何尽量避免Service被杀
 
-13. 二分查找 (√)
-14. 最长公共子序列
-15. 二叉树插入方法（非递归）
-16. 两个队列实现一个栈
-17. 实现二叉树查找，删除节点和反转(medium)
-https://leetcode-cn.com/problems/delete-node-in-a-bst/
+#### 12. ContentProvider 什么意义，和数据库存储什么关系
 
-18. merge two sorted lists (√)
+#### 13. ArrayList 的 LinkedList 的区别
 
-19. leetcode 33题，旋转一个排序数组后查找目标值
-https://leetcode-cn.com/problems/search-in-rotated-sorted-array/
+#### 14. MVP模式的优缺点
 
-20. 求一个数组的逆序对
+#### 15. 抽象类和接口的异同
 
-21. 快速排序 topk
+#### 16. http 协议
 
-22. 最小生成子树
-
-23. 矩阵最短路径
-
-24. 最长回文子串 (√)
-https://www.nowcoder.com/practice/b4525d1d84934cf280439aeecc36f4af?tpId=49&&tqId=29360&rp=1&ru=/activity/oj&qru=/ta/2016test/question-ranking
-25. 两个栈实现一个队列
-
-
-二、深度学习部分
-1. 最优化里面的一些算法，牛顿法，共轭梯度法，拟牛顿
-2. bn层详解，优点以及如何反向传播
-
-三、机器学习部分
-1. 了解机器学习基本算法，如分类、回归、聚类、概率模型等
-2. SVM，线性回归和逻辑回归的原理及区别
+#### 17. sleep() 和 wait() 的区别
