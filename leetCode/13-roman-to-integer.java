@@ -25,4 +25,11 @@ public class Solution {
         result += romanToIntMap.get(splitS[splitS.length - 1]);
         return result;
     }
+    
+    public static void main(String[] args) {
+        String input1 = "LVIII"; // M CM XC IV 1000 900 90 4
+        Solution solution = new Solution();
+        int result1 = solution.romanToInt(input1);
+        System.out.println(result1);
+    }
 }
